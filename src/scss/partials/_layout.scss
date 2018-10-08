@@ -1,0 +1,334 @@
+html, body {
+    @include susy-at($medium) { 
+        font-size: 1em;
+        line-height: 1.6;
+    }
+}
+
+.clearfix {
+    @include susy-at($medium) { 
+        @include clearfix;
+    }    
+}
+
+.container {
+    //background: susy-svg-grid() no-repeat scroll;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @include clearfix;
+    .title {
+        text-align: center;
+        padding: 20px 0;
+        margin: 0 10px;   
+        h2 {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+    }
+    @include susy-at($medium) { 
+        max-width: 85%;
+    } 
+    @include susy-at($medium-large) { 
+        max-width: 75%;
+        .title { 
+            margin-top: 40px;
+            margin-bottom: 30px;            
+        }
+    }
+    @include susy-at($large) { 
+        max-width: 70%;
+        .title { 
+            margin-top: 60px;
+            margin-bottom: 60px;                       
+        }
+    }     
+}
+
+.half-left {
+    @include susy-at($medium) {
+        float: left;
+        width: span(6);
+        margin-right: gutter();
+        padding: 0;        
+    }
+}
+
+.half-right {
+    @include susy-at($medium) {
+        float: right;
+        width: span(6);
+        margin-right: 0;
+        padding: 0;        
+    }
+}
+
+.social-nav {
+    @include susy-at($medium) { 
+        a {
+            font-size: 2rem; 
+        }
+    }
+}
+
+/* header */
+.site-branding {
+    @include susy-at($medium) {
+        width: span(3);
+        margin-right: gutter();
+        h2 {
+            margin: 2px 0 0 0;
+        }
+    }
+}
+.header-nav {      
+    @include susy-at($medium-large) {
+        //background: susy-svg-grid() no-repeat scroll;
+        display: block;
+        float: left;
+        width: span(9);
+        margin-right: 0;
+        padding-top: 10px;
+    }
+    @include susy-at($large) {
+        font-size: 1.2rem; 
+        padding-top: 8px;            
+    }
+}
+.header-addon {       
+    @include susy-at($medium-large) { 
+        display: none;
+        width: 0;
+    }    
+}
+.mb-nav-wrapper { 
+    @include susy-at($medium-large) { 
+        display: none;
+    }
+}    
+
+/* hero */
+.hero {
+    @include susy-at($medium) {              
+        .overlay {
+            padding: 50px 8rem 40px; 
+        }
+        .round-shape {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .intro {
+            p:nth-of-type(2n+0) {
+                margin-bottom: 30px;
+            }
+        }
+    } 
+    @include susy-at($medium-large) {              
+        .overlay {
+            padding: 50px 10rem 40px; 
+        }        
+    } 
+    @include susy-at($large) {              
+        .overlay {
+            padding: 50px 12rem 40px;  
+        }
+    }
+    @include susy-at($extra-large) {              
+        .overlay {
+            padding: 50px 30rem 40px;  
+        }
+    }    
+}
+
+/* about */
+.info-nav {
+    @include susy-at($medium) { 
+        ul {
+            margin-bottom: 50px;          
+        }
+    }
+    @include susy-at($large) { 
+        ul {
+            li {
+                span {
+                    width: 16%;
+                    &:last-of-type {
+                        width: 84%;
+                    }                  
+                }                
+            }
+        }
+    }
+    @include susy-at($extra-large) { 
+        ul {
+            li {
+                span {
+                    width: 10%;
+                    &:last-of-type {
+                        width: 90%;
+                    }                  
+                }                
+            }
+        }
+    }
+}
+
+/* testimonials */
+.testimonial {
+    @include susy-at($medium) { 
+        float: left;
+        width: span(4);
+        margin-right: gutter();
+        &:last-of-type {
+            float: right;
+            margin-right: 0;
+        }
+        blockquote {
+            font-size: 0.8rem;
+            padding: 20px 30px; 
+            &::before {
+                margin-left: -10px;
+			    margin-right: 5px;
+            }           
+        }
+    }
+}
+
+/* service */
+.service {
+    @include susy-at($medium) {
+        float: left;  
+        width: span(6);
+        margin-top: 1em;
+        margin-right: gutter();     
+        &:nth-of-type(2n+0) {
+            float: right; 
+            margin-right: 0; 
+        }
+    }
+    @include susy-at($medium-large) {
+        float: left;  
+        width: span(4);
+        margin-right: gutter(); 
+        &:nth-of-type(2n+0) {
+            float: left; 
+            margin-right: gutter();
+        }    
+        &:nth-of-type(3n+0) {
+            float: right; 
+            margin-right: 0; 
+        }
+    }
+}
+
+/* resume */
+.achievement {
+    @include susy-at($medium) { 
+        .timeline-nav {
+            ul {
+                margin-bottom: 30px;        
+                li {
+                    padding: 20px 0px 20px 20px;
+                    margin-top: 60px;                   
+                    .year {                
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 42px;
+                        .to, .from {
+                            transform: translateX(-110%);
+                        }
+                        .to {
+                            top: -17px;
+                        }
+                        .from {
+                           bottom: -20px; 
+                        }
+                    }
+                }
+            }        
+        }
+    }    
+}
+
+.skill {
+    @include susy-at($medium) { 
+        h3 {
+            margin-top: 0;
+        }
+    }   
+}
+
+/* portfolio */
+.work {
+    @include susy-at($small) { 
+        width: span(6);
+        margin-right: gutter();	
+        float: left;
+        &:nth-of-type(2n+0) {
+            float: right;
+            margin-right: 0;
+        } 
+    }      
+    @include susy-at($medium) {
+        width: span(4);
+        margin-right: gutter();	
+        float: left;
+        &:nth-of-type(2n+0) {
+            float: left;
+            margin-right: gutter();
+        }
+        &:nth-of-type(3n+0) {
+            float: right;
+            margin-right: 0;
+        }
+        span {
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }       
+}
+
+/* blog-list */
+.blog-summery {
+    @include susy-at($medium) { 
+        float: left;
+        width: span(6);
+        margin-top: 1em;
+        margin-right: gutter();
+        &:nth-of-type(2n+0) {
+            float: right;
+            margin-right: 0;
+        }
+        .blog-img-info {
+            .feature-img {  
+                height: 125px;
+            }
+        }
+    }
+}
+
+/* contact */
+.contact-info {
+    @include susy-at($medium-large) { 
+        margin-left: 3rem;
+    }
+    @include susy-at($large) { 
+        margin-left: 6rem;
+    }
+    @include susy-at($extra-large) { 
+        margin-left: 12rem;
+    }
+}
+
+/* footer */
+footer {
+    @include susy-at($medium-large) { 
+        padding: 20px 0;
+    }   
+}

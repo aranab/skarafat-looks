@@ -1,42 +1,106 @@
 /* import font from goole fonts */
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,700|Raleway:400,400i,500,500i,700|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700');
 
 /* Color paletter */
 $white: rgba(255, 255, 255, 1);
-$offWhite: rgba(243, 243, 243, 1);
-$yellow: rgba(246, 185, 8, 1);
-$lightYellow: rgba(246, 187, 8, 0.9);
-$moreLightYellow: rgba(239, 211, 120, 1);
-$black: rgb(0, 0, 0);
-$lightBlack: rgba(59, 59, 59, 1);
-$gray: rgba(188, 191, 196, 1);
+$isabelline: rgba(241, 242, 235, 1);
+$timberwolf: rgba(216, 218, 211, 1);
+$cambridgeBlue: rgba(164, 194, 165, 1);
+$ebony: rgba(86, 98, 70, 1);
+$outerSpace: rgba(74, 74, 72, 1);
+$black: rgba(0, 0, 0, 1);
 
-$link-text-color: $lightBlack;
-$link-text-color-hover: $yellow;
+/* fonts */
+$openSanRegular: 'Open Sans', sans-serif;
+$robotBold: 'Roboto', sans-serif;
 
-$dosis: 'Dosis', sans-serif;
-$raleway: 'Raleway', sans-serif;
-$roboto: 'Roboto', sans-serif;
+/* apply fonts */
+$body-tag-font: $openSanRegular;
+$header-tag-font: $robotBold;
+$b-strong-tag-font: $robotBold;
 
+/* fonts color */
+$defualt-font-color: $outerSpace;
+$h2-h3-font-color: $ebony;
+$link-font-color: $ebony;
+$link-font-color-hover: $cambridgeBlue;
+$hero-font-color: $white; 
+$icon-font-color: $ebony;
+$icon-font-hover-color: $cambridgeBlue;
+
+/* fonts size */
+$default-font-size: 16px;
+
+/* radius */
 $default-border-radius: 8px;
-$button-border-radius: 50px;
+$button-border-radius: 30px;
 
-$btn-ground-black-white: linear-gradient(
-  to right, 
-  $lightBlack,
-  $lightBlack 35%,
-  $white 35%,
-  $white 75%
-);
+/* shadow */
+$header-box-shadow: 0 2px 2px rgba($black, 0.2);
+$text-shadow: 0 2px 2px rgba($black, 0.2);
 
-$btn-ground-yellow-white: linear-gradient(
-  to right, 
-  $yellow,
-  $yellow 40%,
-  $white 40%,
-  $white 60%
-);
+/* background color */
+$body-background: $white;
+$site-header-background: $white;
 
+/* mobile background color */
+$mobile-btn-background: $outerSpace;
+$mobile-container-background: $outerSpace;
+$mobile-nav-border-color: $ebony;
+$mobile-nav-li-hover-background: $cambridgeBlue;
+$mobile-nav-link-hover-color: $white;
+
+/* overlay background color */
+$overlay-background: rgba($outerSpace, .8);
+
+/* blockquote background color */
+$blockquote-background: $outerSpace;
+$blockquote-hover-background: rgba($outerSpace, .8);
+/* blockquote fonts color */
+$blockquote-font-color: $white;
+$blockquote-font-hover-color: $cambridgeBlue;
+/* blockquote border radius */
+$blockquote-border-radius: 50px 0 50px 0;
+
+/* service */
+$service-background: $isabelline;
+$service-box-shadow: 0 5px 14px 0 rgba($black, 0.2);
+
+/* timeline left line background color */
+$timeline-left-line-background: $ebony;
+$timeline-first-p-font-color: $cambridgeBlue;
+
+/* progress bar background color */
+$progress-bar-background: $outerSpace;
+$progress-bar-span-background: $ebony;
+
+/* portfolio */
+$portfolio-background: $isabelline;
+$portfolio-box-shadow: 0 5px 14px 0 rgba($black, 0.2);
+$work-addon-background: $white;
+/* portfolio feature nav */
+$feature-nav-border-color: $outerSpace;
+$feature-nav-hover-font-color: $white;
+$feature-nav-hover-background: $ebony;
+
+/* blog-list */
+$blog-date-font-color: $cambridgeBlue;
+$blog-img-border-color: $cambridgeBlue;
+
+/* contact */
+$contact-background: $isabelline;
+/* input control background color */
+$input-control-box-shadow: 0 3px 10px 0 rgba($black, 0.2);
+$input-control-focus-box-shadow: 0 2px 8px 0 rgba($ebony, 0.7);
+/* contact info */
+$contact-info-body-left-border-color: rgba($outerSpace, 0.2);
+
+/* footer */
+$footer-background: $outerSpace;
+$footer-font-color: $white;
+$footer-social-icon-color: $white;
+
+/* viewport */
 $smaller: (
   'min-width': 320px,
   'columns': susy-repeat(4),
@@ -45,40 +109,43 @@ $smaller: (
 
 $small: (
   'min-width': 340px,
-  'columns': susy-repeat(6),
+  'columns': susy-repeat(12),
   'gutters': 1/6,
 );
 
 $medium: (
   'min-width': 768px,
   'columns': susy-repeat(12),
-  'gutters': 1/6,
+  'gutters': 1.50,
 );
 
 $medium-large: (
   'min-width': 960px,
   'columns': susy-repeat(12),
-  'gutters': 1/6,
+  'gutters': 1.50,
 );
 
 $large: (
   'min-width': 1440px,
   'columns': susy-repeat(12),
-  'gutters': 1/6,
+  'gutters': 1.50,
 );
 
 $extra-large: (
   'min-width': 2040px,
   'columns': susy-repeat(12),
-  'gutters': 1/6,
+  'gutters': 1.50,
 );
 
-// Susy map setup
+/* Susy map setup */
 $susy: (
     'columns': susy-repeat(12),
-    'gutters': 1/6
+    'gutters': 0.25,
+    'spread': 'narrow',
+    'container-spread': 'narrow',
 );
 
+/* Susy media query mixins */
 @mixin susy-at(
   $config,
   $maxWidth: false

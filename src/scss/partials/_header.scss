@@ -1,0 +1,101 @@
+.site-header {
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: $site-header-background;
+    box-shadow: $header-box-shadow;
+}
+
+.site-branding {   
+    float: left;
+    width: span(9);
+    h2 {
+        margin: 6px 0 0 0;
+    }
+}
+
+/* desktop navigation */
+.header-nav {  
+    display: none;
+    text-align: right;   
+    a {
+        padding: 0 7px;
+        font-weight: bold;
+        text-shadow: $text-shadow;
+    }
+}
+
+.header-addon {   
+    float: right;
+    width: span(3);
+    ul li {
+        float: right;
+    }
+}
+
+.header-nav,
+.header-addon {
+    ul {
+        margin: 0;
+        padding: 0;
+    }   
+}
+
+/* mobile Button navigation */
+.mb-nav-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    overflow: hidden;
+}
+
+#mb-nav-anime {
+    width: 100%;
+    height: 100%;
+    position: relative;   
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    backface-visibility: hidden; 
+}
+
+.mb-nav-container {   
+    width: span(6);
+    height: 100%;
+    padding-top: 25px;
+    background: $mobile-container-background;
+    position: absolute;
+    top: 0;
+    right: -1000px; 
+    z-index: 1001;     
+}
+
+.mobile-nav {
+    ul {
+        margin: 0;
+        padding: 0;
+    } 
+    li {
+        display: block;
+        padding: 10px 0 7px 15px;
+        border-bottom: 1px solid $mobile-nav-border-color;
+        &:last-of-type {
+            border-bottom: none;
+        }
+        &:hover {
+            background: $mobile-nav-li-hover-background;            
+        }
+    }
+    a {
+        font-size: 14px;
+        font-weight: bold;
+        color: $white;
+        &:hover {
+            color: $mobile-nav-link-hover-color;            
+        }       
+    }
+}
