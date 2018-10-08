@@ -5,12 +5,9 @@
 @import 'plugins/fontawesome-sass/solid';
 
 @import 'partials/variables';
-@import 'partials/base';
-@import 'partials/normalize';
 @import "partials/mixins";
+@import 'partials/normalize';
+@import 'partials/base';
+@import "partials/header";
 @import 'partials/modules';
 @import 'partials/layout';
-
-.name {
-    background-color: rgb(141, 15, 32);
-}
