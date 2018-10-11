@@ -75,8 +75,8 @@ html, body {
 
 /* header */
 .site-branding {
-    @include susy-at($medium) {
-        width: span(3);
+    @include susy-at($medium-large) {
+        width: span(4);
         margin-right: gutter();
         h2 {
             margin: 2px 0 0 0;
@@ -88,7 +88,7 @@ html, body {
         //background: susy-svg-grid() no-repeat scroll;
         display: block;
         float: left;
-        width: span(9);
+        width: span(8);
         margin-right: 0;
         padding-top: 10px;
     }
@@ -172,27 +172,6 @@ html, body {
                     }                  
                 }                
             }
-        }
-    }
-}
-
-/* testimonials */
-.testimonial {
-    @include susy-at($medium) { 
-        float: left;
-        width: span(4);
-        margin-right: gutter();
-        &:last-of-type {
-            float: right;
-            margin-right: 0;
-        }
-        blockquote {
-            font-size: 0.8rem;
-            padding: 20px 30px; 
-            &::before {
-                margin-left: -10px;
-			    margin-right: 5px;
-            }           
         }
     }
 }
