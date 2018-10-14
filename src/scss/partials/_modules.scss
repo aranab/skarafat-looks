@@ -1,13 +1,22 @@
 /* hero */
 .hero {
     padding-top: 80px;
+    padding-bottom: 0;
     color: $hero-font-color;
     text-align: center;
+    #particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
     .overlay {
+        position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 20px;
         background: $overlay-background;
+        z-index: 2;
     }
     .round-shape {
         display: inline-block;
@@ -17,14 +26,14 @@
 		border-radius: 50%;
 		border: 3px solid $white;
         padding: 3px;
-        margin: 20px auto 10px auto;
+        margin: 20px auto 10px auto;       
 		img {
 			border-radius: 50%;
 			width: 100%;
 			height: 100%;		
         }        
     }
-    .intro {
+    .intro {        
         .words-wrapper {
             display: inline-block;
             position: relative;
@@ -76,7 +85,6 @@
 
 .jumbotron {
     @include backImage('images/hero.jpg', auto, center center);
-	padding-top: 80px;
 }
 
 /* about */
@@ -258,8 +266,6 @@
 /* portfolio */
 .portfolio {
     background-color: $portfolio-background;
-}
-.feature-work {
     .feature-nav {
         text-align: center;
         margin-bottom: 40px;
@@ -272,9 +278,18 @@
                 &:last-of-type {
                     margin-right: 0;
                 }
+                .active {
+                    color: $feature-nav-hover-font-color;
+                    background: $feature-nav-hover-background;
+                    border: none;
+                    padding: 6px 11px;
+                }
             }
         }
         a {
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
             border: 1px solid $feature-nav-border-color;
             border-radius: $button-border-radius;
             padding: 5px 10px;
@@ -283,60 +298,143 @@
                 background: $feature-nav-hover-background;
                 border: none;
                 padding: 6px 11px;
-            }
+            }            
         }   
     }
 }
-.work {	 
-	text-align: center;	
-	padding-top: 10px;
-	margin-bottom: 20px;
-	border-top-left-radius: $default-border-radius;
-    border-top-right-radius: $default-border-radius;
-    box-shadow: $service-box-shadow;			
-	span {
-		margin: 0 auto;		
-		display: block;
-		img {
-			width: 80px;
-			height: 80px;
-		}
-	}
-	.work-addon {
-		background: $work-addon-background;
-		text-align: left;
-		padding: 10px; 
-		h3 {
-			padding: 0;
-			margin: 0;
-			width: span(6);
-			margin-right: gutter();
-			font-size: 10px;
-			display: inline-block;
-		}
-        .express-addon {
-            float: right;
-            ul {
-                margin: 0;
-                padding: 0;
+.feature-works {
+    position: relative;
+    overflow: hidden;
+    .sizer {
+        opacity: 0;
+        visibility: hidden;        
+    }
+    figure {            
+        margin: 0;
+        padding: 0;
+    }
+    .column {
+        position: relative;
+        float: left;
+        min-height: 1px;
+        width: span(6);
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 8px;
+        margin-bottom: 12px;        
+        .block {            
+            position: relative;
+            overflow: hidden;
+            box-shadow: $portfolio-box-shadow;
+            .popup:hover::before {
+                opacity: 1;
             }
-            a {
-                padding: 0 5px;
-                font-size: 1rem;    
-                &::before {
-                    font-family: "Font Awesome 5 Free";
-                    padding-right: 5px;
-                }    
-                &.like::before {       
-                    content: fa-content($fa-var-heart);        
-                }    
-                &.dislike::before {       
-                    content: fa-content($fa-var-thumbs-down);
+            .popup::before {
+               content: "";
+               width: 100%;
+               height: 100%;               
+               background: $portfolio-before-background;
+               opacity: 0;
+               position: absolute;
+               transition: all .3s ease-in-out;
+               bottom: 0;
+               z-index: 1; 
+            }            
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                transform: scale(1.04);
+                transition: all .3s ease;                                
+            }
+            &:hover img {
+                transform: scale(1.01);
+            }
+            &:hover .work-addon {
+                visibility: visible;
+                opacity: 1;
+                background: $work-addon-hover-background;
+            }
+            .work-addon {
+                width: 100%;
+                padding: 8px;
+                position: absolute;
+                bottom: 0;
+                z-index: 1;
+                opacity: 0;           
+                visibility: hidden;                
+                h6 {
+                    float: left;
+                    width: span(7);                    
+                    font-size: 0.6rem;
+                    color: $work-addon-h6-font-color;
+                    text-transform: uppercase;
+                    margin: 4px 0;
+                    white-space: nowrap;
+                    overflow: hidden;                    
                 }
-            }    
+                .express-addon {                    
+                    float: right;
+                    width: span(5);
+                    margin-right: 0; 
+                    text-align: right; 
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    a {
+                        padding: 0 5px;
+                        font-size: 0.8rem;
+                        color: $express-addon-font-color;   
+                        &::before {
+                            font-family: "Font Awesome 5 Free";
+                        }    
+                        &.like::before {       
+                            content: fa-content($fa-var-heart);        
+                        }    
+                        &.dislike::before {       
+                            content: fa-content($fa-var-thumbs-down);
+                        }
+                        &:hover {
+                            color: $express-addon-font-hover-color;
+                        }
+                        &.active {
+                            color: $express-addon-font-hover-color;
+                        }
+                    }
+                }
+            }
         }
-	}
+        .aspect {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            overflow: hidden;
+            text-align: center;
+        }        
+        .aspect__inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .aspect--4x3 {
+            padding-bottom: 75%;
+        }        
+        .aspect--16x9 {
+            padding-bottom: 56.25%;
+        }
+        .aspect--9x80 {
+            padding-bottom: calc(112.5% + 8px);
+        }        
+        .aspect--32x9 {
+            padding-bottom: calc(28.125% - 3px);
+        }       
+    }    
 }
+
 
 /* blog-list */
 .blog-summery {

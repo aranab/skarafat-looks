@@ -64,9 +64,19 @@ a {
     }
 }
 
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
 section {
     padding-top: 20px;
     padding-bottom: 50px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 
 .half-left {

@@ -71,6 +71,18 @@ module.exports = function (grunt) {
         },
 
         /**
+         * Grunt Minjson
+         * Minify and concat JSON files.
+         * https://www.npmjs.com/package/grunt-minjson
+         */
+        minjson: {
+            dist: {
+                src: buildConfig.src.json.files,
+                dest: buildConfig.dist.json
+            }
+        },
+
+        /**
          * Grunt Contrib Htmlmin
          * Minify HTML
          * https://www.npmjs.com/package/grunt-contrib-htmlmin
@@ -100,7 +112,8 @@ module.exports = function (grunt) {
                 'gruntfile.js',
                 'BuildConfig.js',
                 'webpack.config.js',
-                buildConfig.src.scripts.files
+                buildConfig.src.scripts.files,
+                buildConfig.src.json.files
             ],
             options: { 
                 jshintrc: true,
@@ -147,13 +160,21 @@ module.exports = function (grunt) {
                 }
             },
             scripts: {
-                files: buildConfig.src.scripts.files,
+                files: buildConfig.src.scripts.watch,
                 tasks: ['scripts'],
                 options: {
                     cwd: buildConfig.src.scripts.cwd,
                     livereload: true
                 }
             }, 
+            json: {
+                files: buildConfig.src.json.watch,
+                tasks: ['json'],
+                options: {
+                    cwd: buildConfig.src.json.cwd,
+                    livereload: true
+                }
+            },
             htmlmin: {
                 files: buildConfig.src.html.files,
                 tasks: ['html'],
@@ -174,8 +195,9 @@ module.exports = function (grunt) {
     // friendly aliases
     grunt.registerTask('fonts', 'copy:distFonts');
     grunt.registerTask('images', 'copy:distImages');
-    grunt.registerTask('styles', 'sass:dist');
     grunt.registerTask('scripts', 'webpack:dist');
+    grunt.registerTask('json', 'minjson:dist');
+    grunt.registerTask('styles', 'sass:dist');   
     grunt.registerTask('html', 'htmlmin:dist');
 
     // Build tasks
@@ -183,6 +205,7 @@ module.exports = function (grunt) {
         'clean',
         'styles',
         'scripts',
+        'json',
         'html',
         'fonts',
         'images'

@@ -3,7 +3,7 @@ var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 var buildConfig = require('./BuildConfig')();
 
 module.exports = {
-    entry: buildConfig.src.scripts.file,
+    entry: buildConfig.src.scripts.file,    
     output: {        
         path: buildConfig.dist.distBaseAssetsPath,
         filename: buildConfig.dist.scripts,

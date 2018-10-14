@@ -232,7 +232,6 @@ html, body {
         }
     }    
 }
-
 .skill {
     @include susy-at($medium) { 
         h3 {
@@ -242,35 +241,66 @@ html, body {
 }
 
 /* portfolio */
-.work {
-    @include susy-at($small) { 
-        width: span(6);
-        margin-right: gutter();	
-        float: left;
-        &:nth-of-type(2n+0) {
-            float: right;
-            margin-right: 0;
-        } 
-    }      
-    @include susy-at($medium) {
-        width: span(4);
-        margin-right: gutter();	
-        float: left;
-        &:nth-of-type(2n+0) {
-            float: left;
-            margin-right: gutter();
-        }
-        &:nth-of-type(3n+0) {
-            float: right;
-            margin-right: 0;
-        }
-        span {
-            img {
-                width: 120px;
-                height: 120px;
+.feature-works {
+    @include susy-at($medium) { 
+        .column {
+            width: span(4);
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-bottom: 18px;  
+            .block {
+                .work-addon { 
+                    h6 {
+                        font-size: 0.8rem;
+                    } 
+                    .express-addon {
+                        a {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
             }
         }
-    }       
+    }
+    @include susy-at($large) { 
+        .column {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 20px;
+            .block {
+                .work-addon { 
+                    padding: 12px;
+                    h6 {
+                        font-size: 0.9rem;
+                        margin: 2px 0;
+                    } 
+                    .express-addon {
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include susy-at($extra-large) { 
+        .column {
+            width: span(3);
+            .block {
+                .work-addon { 
+                    padding: 14px;
+                    h6 {
+                        font-size: 1rem;
+                    } 
+                    .express-addon {
+                        a {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* blog-list */

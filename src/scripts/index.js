@@ -2,6 +2,9 @@ var lib = require('./lib');
 var textAnimation = require('./textAnimation');
 var skillAnimation = require('./skillAnimation');
 var owlCarousel = require('owl.carousel');
+var particlesJs = require('exports-loader?window.particlesJS.load!particles.js');
+var portfolio = require('./portfolio');
+require('lity');
 
 (function($) {
     "use strict";
@@ -62,6 +65,13 @@ var owlCarousel = require('owl.carousel');
                 }
             }
         });
-    });       
 
-})(jQuery, owlCarousel, textAnimation, skillAnimation);
+        particlesJs('particles', 'assets/all.min.json', null);
+
+        window.portfolio = new portfolio.init();            
+              
+    });
+})( 
+    jQuery, 
+    owlCarousel 
+);

@@ -87,11 +87,17 @@ $progress-bar-after-background: $cambridgeBlue;
 /* portfolio */
 $portfolio-background: $isabelline;
 $portfolio-box-shadow: 0 5px 14px 0 rgba($black, 0.2);
-$work-addon-background: $white;
+$portfolio-before-background: linear-gradient(0deg, rgba(0,0,0,0.65) 0, rgba(0,0,0,0) 75%);
 /* portfolio feature nav */
 $feature-nav-border-color: $outerSpace;
 $feature-nav-hover-font-color: $white;
 $feature-nav-hover-background: $ebony;
+/* portfolio work-addon */
+$work-addon-hover-background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8));
+$work-addon-h6-font-color: $white;
+/* portfolio express-addon */
+$express-addon-font-color: $white;
+$express-addon-font-hover-color: $cambridgeBlue;
 
 /* blog-list */
 $blog-date-font-color: $cambridgeBlue;
