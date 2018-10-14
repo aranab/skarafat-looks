@@ -64,9 +64,19 @@ a {
     }
 }
 
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
 section {
     padding-top: 20px;
     padding-bottom: 50px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 
 .half-left {
@@ -103,38 +113,56 @@ section {
         font-family: 'Font Awesome 5 Free';
         content: fa-content($fa-var-bars);       
     }
-    &::hover {
-        color: $link-font-color-hover;
+    &:hover {
+        color: $mobile-btn-hover-font-color;
+        background-color: $mobile-btn-hover-background;
+    }
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    &::before {
+        font-family: 'Font Awesome 5 Free';
+        content: fa-content($fa-var-times);
+        background-color: $mobile-close-btn-background;
+        border-radius: 50%;
+        color: $mobile-close-btn-font-color;
+        padding: 4px 5px;    
+    }
+    &:hover {
+        color: $mobile-close-btn-font-hover-color;
     }
 }
 
 .btn-my-work {
     @extend %btn;
-    background: $mobile-btn-background;
+    background-color: $mobile-btn-background;
     padding: 9px 20px;    
 }
 
 .btn-hire-me {
     @extend %btn;
-    background: $mobile-btn-background;
+    background-color: $mobile-btn-background;
     padding: 9px 20px;
 }
 
 .btn-cv {
     @extend %btn;
-    background: $mobile-btn-background;
+    background-color: $mobile-btn-background;
     padding: 9px 20px;
 }
 
 .btn-more {
     @extend %btn;
-    background: $mobile-btn-background;
+    background-color: $mobile-btn-background;
     padding: 9px 20px;
 }
 
 .btn-submit {
     @extend %btn;
-    background: $mobile-btn-background;
+    background-color: $mobile-btn-background;
     padding: 9px 20px;
 }
 
@@ -199,12 +227,39 @@ nav {
 /* progress bar */
 .progress {
     width: 100%;
-    background: $progress-bar-background;
-    line-height: 22;
-    span {
-        display: block;
-        background: $progress-bar-span-background;
-        padding: 8px;
+    background-color: $progress-background;
+    height: 10px;
+    display: flex;
+    .progress-bar {
+        width: 0;
+        background-color: $progress-bar-background;
+        position: relative;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        white-space: nowrap;
+        transition: all 2s ease-out;
+        .progress-value {
+            font-size: 1rem;
+            font-weight: bold;
+            color: $progress-bar-font-color;
+            position: absolute;
+            top: -30px;
+            right: 0;            
+        }
+        &::after {
+            content: "";
+            display: block;
+            border: 15px solid transparent;
+            border-bottom: 21px solid transparent;
+            position: absolute;
+            top: -26px;
+            right: -12px;
+            border-bottom-color: $progress-bar-after-background;
+        }
     }
 }
 

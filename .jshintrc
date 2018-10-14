@@ -53,7 +53,7 @@
     "validthis": false,
     "globals": {
         "$": false,
-        "jquery": false,
+        "jQuery": false,
         "require": false,
         "console": false,
         "module": false,

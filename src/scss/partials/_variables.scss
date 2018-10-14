@@ -45,20 +45,28 @@ $site-header-background: $white;
 
 /* mobile background color */
 $mobile-btn-background: $outerSpace;
+$mobile-btn-hover-background: $ebony;
+$mobile-btn-hover-font-color: $white;
 $mobile-container-background: $outerSpace;
 $mobile-nav-border-color: $ebony;
 $mobile-nav-li-hover-background: $cambridgeBlue;
 $mobile-nav-link-hover-color: $white;
+$mobile-close-btn-background: $white;
+$mobile-close-btn-font-color: $ebony;
+$mobile-close-btn-font-hover-color: $cambridgeBlue;
 
 /* overlay background color */
 $overlay-background: rgba($outerSpace, .8);
+
+/* text animation after element*/
+$text-animation-after-element-color: $ebony;
 
 /* blockquote background color */
 $blockquote-background: $outerSpace;
 $blockquote-hover-background: rgba($outerSpace, .8);
 /* blockquote fonts color */
 $blockquote-font-color: $white;
-$blockquote-font-hover-color: $cambridgeBlue;
+$blockquote-font-hover-color: $white;
 /* blockquote border radius */
 $blockquote-border-radius: 50px 0 50px 0;
 
@@ -71,17 +79,25 @@ $timeline-left-line-background: $ebony;
 $timeline-first-p-font-color: $cambridgeBlue;
 
 /* progress bar background color */
-$progress-bar-background: $outerSpace;
-$progress-bar-span-background: $ebony;
+$progress-background: $outerSpace;
+$progress-bar-background: $ebony;
+$progress-bar-font-color: $cambridgeBlue;
+$progress-bar-after-background: $cambridgeBlue;
 
 /* portfolio */
 $portfolio-background: $isabelline;
 $portfolio-box-shadow: 0 5px 14px 0 rgba($black, 0.2);
-$work-addon-background: $white;
+$portfolio-before-background: linear-gradient(0deg, rgba(0,0,0,0.65) 0, rgba(0,0,0,0) 75%);
 /* portfolio feature nav */
 $feature-nav-border-color: $outerSpace;
 $feature-nav-hover-font-color: $white;
 $feature-nav-hover-background: $ebony;
+/* portfolio work-addon */
+$work-addon-hover-background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8));
+$work-addon-h6-font-color: $white;
+/* portfolio express-addon */
+$express-addon-font-color: $white;
+$express-addon-font-hover-color: $cambridgeBlue;
 
 /* blog-list */
 $blog-date-font-color: $cambridgeBlue;
@@ -94,6 +110,9 @@ $input-control-box-shadow: 0 3px 10px 0 rgba($black, 0.2);
 $input-control-focus-box-shadow: 0 2px 8px 0 rgba($ebony, 0.7);
 /* contact info */
 $contact-info-body-left-border-color: rgba($outerSpace, 0.2);
+/* go top button*/
+$btn-top-font-color: $cambridgeBlue;
+$btn-top-font-hover-color: $ebony;
 
 /* footer */
 $footer-background: $outerSpace;

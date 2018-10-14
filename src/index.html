@@ -14,17 +14,17 @@
     <header class="site-header">
         <div class="container">
             <div class="site-branding">
-                <h2>Md. Arafat Rahman</h2>
+                <h2>Arafat Rahman</h2>
             </div><!-- site-branding -->
             <nav class="header-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav><!-- header-nav -->
             <nav class="header-addon">
@@ -32,28 +32,25 @@
                     <li><a href="javascript:void(0);" class="btn-mobile"></a></li>
                 </ul>
             </nav><!-- header-addon -->
-            <div class="mb-nav-wrapper">
-                <div id="mb-nav-anime">
-                    <div class="mb-nav-container">
-                        <a href="javascript:void(0);" class="btn-close"></a>
-                        <nav class="mobile-nav">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Service</a></li>
-                                <li><a href="#">Resume</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav><!-- mb-nav -->
-                    </div><!-- mb-nav-anime -->
-                </div><!-- mb-nav-container -->
-            </div><!-- mb-nav-wrapper -->
+            <div id="mb-menu" class="mb-nav-container">
+                <a href="javascript:void(0);" class="btn-close"></a>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav><!-- mobile-nav -->
+            </div><!-- mb-nav-container -->
         </div><!-- container -->
     </header><!-- site-header -->
 
-    <section class="hero jumbotron">
+    <section id="home" class="hero jumbotron">
+        <div id="particles"></div><!-- #particles -->
         <div class="container">
             <div class="overlay">
                 <div class="round-shape">
@@ -61,12 +58,13 @@
                 </div><!-- round-shape -->
                 <div class="intro">
                     <p>Hello, my name is <b>Arafat</b></p>
-                    <h1>
-                        I'm a <b>Developer</b>
-                        <!-- <span>                            
+                    <h1 class="headline">
+                        <span>I'm a</span>
+                        <span class="words-wrapper">
+                            <b class="is-visible">Developer</b>
                             <b>Freelancer</b>
                             <b>Project Manager</b>
-                        </span> -->
+                        </span>
                     </h1>
                     <p>
                         I'm a Web Developer with extensive experience for over 3 years. My expertise is to create
@@ -84,7 +82,7 @@
         </div><!-- container -->
     </section><!-- hero -->
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <div class="title">
                 <h2>About Me</h2>
@@ -160,37 +158,120 @@
                 <h2>Testimonials</h2>
                 <p>Lorem ipsum dolor sit amet!</p>
             </div>
-            <article class="testimonial">
-                <span><img src="assets/images/client_1_r.png"></span>
-                <h4>Robert Jakson</h4>
-                <h6>Western Block, California</h6>
-                <blockquote>
-                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                    sollicitudin, lorem quis bibendum"
-                </blockquote>
-            </article><!-- testimonial -->
-            <article class="testimonial">
-                <span><img src="assets/images/client_2_r.png"></span>
-                <h4>Robert Jakson</h4>
-                <h6>Western Block, California</h6>
-                <blockquote>
-                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                    sollicitudin, lorem quis bibendum"
-                </blockquote>
-            </article><!-- testimonial -->
-            <article class="testimonial">
-                <span><img src="assets/images/client_3_r.png"></span>
-                <h4>Robert Jakson</h4>
-                <h6>Western Block, California</h6>
-                <blockquote>
-                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                    sollicitudin, lorem quis bibendum"
-                </blockquote>
-            </article><!-- testimonial -->
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_1_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_2_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_3_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_1_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_2_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_3_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_1_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_2_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+                <div class="item">
+                    <article class="testimonial">
+                        <span><img src="assets/images/client_3_r.png"></span>
+                        <h4>Robert Jakson</h4>
+                        <h6>Western Block, California</h6>
+                        <blockquote>
+                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum"
+                        </blockquote>
+                    </article><!-- testimonial -->
+                </div><!-- item -->
+            </div><!-- carousel -->
         </div><!-- container -->
     </section><!-- testimonials -->
 
-    <section class="services">
+    <section id="service" class="services">
         <div class="container">
             <div class="title">
                 <h2>My Serives</h2>
@@ -247,366 +328,571 @@
         </div><!-- container -->
     </section><!-- service -->
 
-    <section class="resume">
+    <section id="resume" class="resume">
         <div class="container">
             <div class="title">
                 <h2>My Resume</h2>
                 <p>Lorem ipsum dolor sit amet!</p>
             </div><!-- title -->
-            <div class="half-left">
-                <div class="achievement">
-                    <h3>Work Experience</h3>
-                    <nav class="timeline-nav">
-                        <ul>
-                            <li>
-                                <span class="line-left"></span>
-                                <div class="content">
-                                    <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
-                                    <p>September 2008 - June 2010</p>
-                                    <p>
-                                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                                        auctor
-                                        aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                        consequat
-                                        ipsum
-                                    </p>
-                                </div>
-                                <span class="year">
-                                    <span class="to">2014</span>
-                                    <span class="from">2013</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="line-left"></span>
-                                <div class="content">
-                                    <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
-                                    <p>September 2008 - June 2010</p>
-                                    <p>
-                                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                                        auctor
-                                        aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                        consequat
-                                        ipsum
-                                    </p>
-                                </div>
-                                <span class="year">
-                                    <span class="to">2014</span>
-                                    <span class="from">2013</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="line-left"></span>
-                                <div class="content">
-                                    <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
-                                    <p>September 2008 - June 2010</p>
-                                    <p>
-                                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                                        auctor
-                                        aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                        consequat
-                                        ipsum
-                                    </p>
-                                </div>
-                                <span class="year">
-                                    <span class="to">2014</span>
-                                    <span class="from">2013</span>
-                                </span>
-                            </li>
-                        </ul>
-                    </nav><!-- timeline-nav -->
-                </div><!-- achievement -->
-            </div><!-- half-left -->
-            <div class="half-right">
-                <div class="achievement">
-                    <h3>Education</h3>
-                    <nav class="timeline-nav">
-                        <ul>
-                            <li>
-                                <span class="line-left"></span>
-                                <div class="content">
-                                    <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
-                                    <p>September 2008 - June 2010</p>
-                                    <p>
-                                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                                        auctor
-                                        aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                        consequat
-                                        ipsum
-                                    </p>
-                                </div>
-                                <span class="year">
-                                    <span class="to">2014</span>
-                                    <span class="from">2013</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="line-left"></span>
-                                <div class="content">
-                                    <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
-                                    <p>September 2008 - June 2010</p>
-                                    <p>
-                                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                                        auctor
-                                        aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                        consequat
-                                        ipsum
-                                    </p>
-                                </div>
-                                <span class="year">
-                                    <span class="to">2014</span>
-                                    <span class="from">2013</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="line-left"></span>
-                                <div class="content">
-                                    <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
-                                    <p>September 2008 - June 2010</p>
-                                    <p>
-                                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                                        auctor
-                                        aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                        consequat
-                                        ipsum
-                                    </p>
-                                </div>
-                                <span class="year">
-                                    <span class="to">2014</span>
-                                    <span class="from">2013</span>
-                                </span>
-                            </li>
-                        </ul>
-                    </nav><!-- timeline-nav -->
-                </div><!-- achievement -->
-            </div><!-- half-right -->
-            <div class="half-left">
-                <div class="skill">
-                    <h3>Coding Skills</h3>
-                    <nav class="skill-nav">
-                        <ul>
-                            <li>
-                                <h6>GRAPHIC DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:95%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>WEB DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:70%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>HTML/CSS</h6>
-                                <div class="progress">
-                                    <span style="width:85%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>JQUERY</h6>
-                                <div class="progress">
-                                    <span style="width:60%"></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav><!-- skill-nav -->
-                </div><!-- skill -->
-            </div><!-- half-left -->
-            <div class="half-right">
-                <div class="skill">
-                    <h3>Coding Skills</h3>
-                    <nav class="skill-nav">
-                        <ul>
-                            <li>
-                                <h6>GRAPHIC DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:95%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>WEB DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:70%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>HTML/CSS</h6>
-                                <div class="progress">
-                                    <span style="width:85%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>JQUERY</h6>
-                                <div class="progress">
-                                    <span style="width:60%"></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav><!-- skill-nav -->
-                </div><!-- skill -->
-            </div><!-- half-right -->
-            <div class="half-left">
-                <div class="skill">
-                    <h3>Coding Skills</h3>
-                    <nav class="skill-nav">
-                        <ul>
-                            <li>
-                                <h6>GRAPHIC DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:95%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>WEB DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:70%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>HTML/CSS</h6>
-                                <div class="progress">
-                                    <span style="width:85%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>JQUERY</h6>
-                                <div class="progress">
-                                    <span style="width:60%"></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav><!-- skill-nav -->
-                </div><!-- skill -->
-            </div><!-- half-left -->
-            <div class="half-right">
-                <div class="skill">
-                    <h3>Coding Skills</h3>
-                    <nav class="skill-nav">
-                        <ul>
-                            <li>
-                                <h6>GRAPHIC DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:95%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>WEB DESIGN</h6>
-                                <div class="progress">
-                                    <span style="width:70%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>HTML/CSS</h6>
-                                <div class="progress">
-                                    <span style="width:85%"></span>
-                                </div>
-                            </li>
-                            <li>
-                                <h6>JQUERY</h6>
-                                <div class="progress">
-                                    <span style="width:60%"></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav><!-- skill-nav -->
-                </div><!-- skill -->
-            </div><!-- half-right -->
+            <div id="achievements">
+                <div class="half-left">
+                    <div class="achievement">
+                        <h3>Work Experience</h3>
+                        <nav class="timeline-nav">
+                            <ul>
+                                <li>
+                                    <span class="line-left"></span>
+                                    <div class="content">
+                                        <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
+                                        <p>September 2008 - June 2010</p>
+                                        <p>
+                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                                            auctor
+                                            aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                            consequat
+                                            ipsum
+                                        </p>
+                                    </div>
+                                    <span class="year">
+                                        <span class="to">2014</span>
+                                        <span class="from">2013</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="line-left"></span>
+                                    <div class="content">
+                                        <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
+                                        <p>September 2008 - June 2010</p>
+                                        <p>
+                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                                            auctor
+                                            aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                            consequat
+                                            ipsum
+                                        </p>
+                                    </div>
+                                    <span class="year">
+                                        <span class="to">2014</span>
+                                        <span class="from">2013</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="line-left"></span>
+                                    <div class="content">
+                                        <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
+                                        <p>September 2008 - June 2010</p>
+                                        <p>
+                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                                            auctor
+                                            aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                            consequat
+                                            ipsum
+                                        </p>
+                                    </div>
+                                    <span class="year">
+                                        <span class="to">2014</span>
+                                        <span class="from">2013</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </nav><!-- timeline-nav -->
+                    </div><!-- achievement -->
+                </div><!-- half-left -->
+                <div class="half-right">
+                    <div class="achievement">
+                        <h3>Education</h3>
+                        <nav class="timeline-nav">
+                            <ul>
+                                <li>
+                                    <span class="line-left"></span>
+                                    <div class="content">
+                                        <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
+                                        <p>September 2008 - June 2010</p>
+                                        <p>
+                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                                            auctor
+                                            aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                            consequat
+                                            ipsum
+                                        </p>
+                                    </div>
+                                    <span class="year">
+                                        <span class="to">2014</span>
+                                        <span class="from">2013</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="line-left"></span>
+                                    <div class="content">
+                                        <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
+                                        <p>September 2008 - June 2010</p>
+                                        <p>
+                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                                            auctor
+                                            aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                            consequat
+                                            ipsum
+                                        </p>
+                                    </div>
+                                    <span class="year">
+                                        <span class="to">2014</span>
+                                        <span class="from">2013</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="line-left"></span>
+                                    <div class="content">
+                                        <h6>ART &amp; PHOTO EDITING, UNIVERSITY NAME</h6>
+                                        <p>September 2008 - June 2010</p>
+                                        <p>
+                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                                            auctor
+                                            aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                            consequat
+                                            ipsum
+                                        </p>
+                                    </div>
+                                    <span class="year">
+                                        <span class="to">2014</span>
+                                        <span class="from">2013</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </nav><!-- timeline-nav -->
+                    </div><!-- achievement -->
+                </div><!-- half-right -->
+            </div><!-- #skills -->
+            <div id="skills">
+                <div class="half-left">
+                    <div class="skill">
+                        <h3>Coding Skills</h3>
+                        <nav class="skill-nav">
+                            <ul>
+                                <li>
+                                    <h6>GRAPHIC DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="95">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>WEB DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="70">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>HTML/CSS</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="85">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>JQUERY</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="60">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav><!-- skill-nav -->
+                    </div><!-- skill -->
+                </div><!-- half-left -->
+                <div class="half-right">
+                    <div class="skill">
+                        <h3>Coding Skills</h3>
+                        <nav class="skill-nav">
+                            <ul>
+                                <li>
+                                    <h6>GRAPHIC DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="95">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>WEB DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="70">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>HTML/CSS</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="85">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>JQUERY</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="60">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav><!-- skill-nav -->
+                    </div><!-- skill -->
+                </div><!-- half-right -->
+                <div class="half-left">
+                    <div class="skill">
+                        <h3>Coding Skills</h3>
+                        <nav class="skill-nav">
+                            <ul>
+                                <li>
+                                    <h6>GRAPHIC DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="95">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>WEB DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="70">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>HTML/CSS</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="85">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>JQUERY</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="60">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav><!-- skill-nav -->
+                    </div><!-- skill -->
+                </div><!-- half-left -->
+                <div class="half-right">
+                    <div class="skill">
+                        <h3>Coding Skills</h3>
+                        <nav class="skill-nav">
+                            <ul>
+                                <li>
+                                    <h6>GRAPHIC DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="95">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>WEB DESIGN</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="70">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>HTML/CSS</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="85">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h6>JQUERY</h6>
+                                    <div class="progress">
+                                        <div class="progress-bar" data-progress-value="60">
+                                            <div class="progress-value"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav><!-- skill-nav -->
+                    </div><!-- skill -->
+                </div><!-- half-right -->
+            </div><!-- #skills -->
         </div><!-- container -->
     </section><!-- resume -->
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="title">
                 <h2>Portfolio</h2>
                 <p>Lorem ipsum dolor sit amet!</p>
             </div><!-- title -->
-            <div class="feature-work">
-                <nav class="feature-nav">
-                    <ul>
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">UI/UX</a></li>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Logo</a></li>
-                    </ul>
-                </nav><!-- feature-nav -->
-                <article class="work">
-                    <span><img src="assets/images/work-1.png"></span>
-                    <div class="work-addon">
-                        <h3>HTML Template</h3>
-                        <nav class="express-addon">
-                            <ul>
-                                <li><a href="#" class="like"></a></li>
-                                <li><a href="#" class="dislike"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article><!-- work -->
-                <article class="work">
-                    <span><img src="assets/images/work-1.png"></span>
-                    <div class="work-addon">
-                        <h3>HTML Template</h3>
-                        <nav class="express-addon">
-                            <ul>
-                                <li><a href="#" class="like"></a></li>
-                                <li><a href="#" class="dislike"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article><!-- work -->
-                <article class="work">
-                    <span><img src="assets/images/work-1.png"></span>
-                    <div class="work-addon">
-                        <h3>HTML Template</h3>
-                        <nav class="express-addon">
-                            <ul>
-                                <li><a href="#" class="like"></a></li>
-                                <li><a href="#" class="dislike"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article><!-- work -->
-                <article class="work">
-                    <span><img src="assets/images/work-1.png"></span>
-                    <div class="work-addon">
-                        <h3>HTML Template</h3>
-                        <nav class="express-addon">
-                            <ul>
-                                <li><a href="#" class="like"></a></li>
-                                <li><a href="#" class="dislike"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article><!-- work -->
-                <article class="work">
-                    <span><img src="assets/images/work-1.png"></span>
-                    <div class="work-addon">
-                        <h3>HTML Template</h3>
-                        <nav class="express-addon">
-                            <ul>
-                                <li><a href="#" class="like"></a></li>
-                                <li><a href="#" class="dislike"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article><!-- work -->
-                <article class="work">
-                    <span><img src="assets/images/work-1.png"></span>
-                    <div class="work-addon">
-                        <h3>HTML Template</h3>
-                        <nav class="express-addon">
-                            <ul>
-                                <li><a href="#" class="like"></a></li>
-                                <li><a href="#" class="dislike"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </article><!-- work -->
-            </div><!-- feature-work -->
-        </div>
+            <nav class="feature-nav filter-options">
+                <ul>
+                    <li><a class="active" data-group="All">All</a></li>
+                    <li><a class="" data-group="Print">Print</a></li>
+                    <li><a class="" data-group="UI/UX">UI/UX</a></li>
+                    <li><a class="" data-group="WebDesign">Web Design</a></li>
+                    <li><a class="" data-group="Logo">Logo</a></li>
+                </ul>
+            </nav><!-- feature-nav -->
+            <div class="feature-works">
+                <figure class="work column" data-groups='["Print"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-1.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">                    
+                                    <img src="assets/images/work-1.jpg" alt="work 1">                    
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup -->
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["Print"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-2.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-2.jpg" alt="work 2">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["Print"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-3.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-3.jpg" alt="work 3">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["UI/UX"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-4.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-4.jpg" alt="work 4">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["UI/UX"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-5.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-5.jpg" alt="work 5">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["UI/UX"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-6.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-6.jpg" alt="work 6">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["WebDesign"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-7.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-7.jpg" alt="work 7">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["WebDesign"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-8.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-8.jpg" alt="work 8">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["WebDesign"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-9.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-9.jpg" alt="work 9">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["Logo"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-10.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-10.jpg" alt="work 10">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup --> 
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["Logo"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-11.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-11.jpg" alt="work 11">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup -->                            
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <figure class="work column" data-groups='["Logo"]' data-date-created="2018-10-10" data-title="simple image">
+                    <div class="block">
+                        <a href="assets/images/work-12.jpg" class="popup" data-lity>
+                            <div class="aspect aspect--4x3">
+                                <div class="aspect__inner">
+                                    <img src="assets/images/work-12.jpg" alt="work 12">
+                                </div><!-- aspect__inner -->
+                            </div><!-- aspect -->
+                        </a><!-- popup -->
+                        <div class="work-addon">
+                            <h6>simple image</h6>
+                            <nav class="express-addon">
+                                <ul>
+                                    <li><a href="#" class="like"></a></li>
+                                    <li><a href="#" class="dislike"></a></li>
+                                </ul>
+                            </nav><!-- express-addon -->
+                        </div><!-- work-addon -->
+                    </div><!-- block -->
+                </figure><!-- work -->
+                <div class="column sizer"></div>
+            </div><!-- feature-works -->
+        </div><!-- container -->
     </section><!-- portfolio -->
 
-    <section class="blog-list">
+    <section id="blog" class="blog-list">
         <div class="container">
             <div class="title">
                 <h2>My Blogs</h2>
@@ -825,7 +1111,7 @@
         </div><!-- container -->
     </section><!-- blog-list -->
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="title">
                 <h2>Get in Touch</h2>
@@ -894,10 +1180,11 @@
                         <li><a href="#" class="facebook"></a></li>
                         <li><a href="#" class="twitter"></a></li>
                     </ul>
-                </nav><!-- social -->
-            </div><!-- container -->
+                </nav><!-- social-nav -->
+            </div><!-- social -->
+            <a href="#home" class="btn-top"></a>
         </div><!-- container -->
-    </footer><!-- site-footer -->
+    </footer><!-- footer -->
     <script src="assets/bundle.min.js"></script>
 </body>
 

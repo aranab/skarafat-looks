@@ -1,10 +1,12 @@
 .site-header {
+    position: fixed;
     width: 100%;
     height: 80px;
     padding-top: 20px;
     padding-bottom: 10px;
     background-color: $site-header-background;
     box-shadow: $header-box-shadow;
+    z-index: 1001;
 }
 
 .site-branding {   
@@ -42,36 +44,21 @@
     }   
 }
 
-/* mobile Button navigation */
-.mb-nav-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    overflow: hidden;
-}
-
-#mb-nav-anime {
-    width: 100%;
-    height: 100%;
-    position: relative;   
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transition: .3s ease all;
-    transition: .3s ease all;
-    backface-visibility: hidden; 
-}
-
 .mb-nav-container {   
-    width: span(6);
+    width: 200px;
     height: 100%;
-    padding-top: 25px;
+    padding-top: 35px;
     background: $mobile-container-background;
-    position: absolute;
-    top: 0;
-    right: -1000px; 
-    z-index: 1001;     
+    position: fixed;
+    top: 80px;
+    right: -200px; 
+    z-index: 1001;  
+    -webkit-transition: .5s ease-out all;
+    transition: .5s ease-out all;   
+}
+
+.open {
+    right: 0;
 }
 
 .mobile-nav {
@@ -91,7 +78,7 @@
         }
     }
     a {
-        font-size: 14px;
+        font-size: 1rem;
         font-weight: bold;
         color: $white;
         &:hover {

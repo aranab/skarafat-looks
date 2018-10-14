@@ -34,6 +34,11 @@ module.exports = function() {
                     '**/*.{jpg,gif,png}'
                 ]
             },
+            'styles': {
+                'cwd': appBasePath + 'scss/',
+                'watch': '**/*.{css,sass,scss}',
+                'files': appBasePath + 'scss/styles.scss'
+            },
             'scripts': {
                 'cwd': appBasePath + 'scripts/',
                 'watch': '**/*.js',
@@ -42,11 +47,13 @@ module.exports = function() {
                 ],
                 'file': appBasePath + 'scripts/index.js'
             },
-            'styles': {
-                'cwd': appBasePath + 'scss/',
-                'watch': '**/*.{css,sass,scss}',
-                'files': appBasePath + 'scss/styles.scss'
-            },
+            'json': {
+                'cwd': appBasePath + 'scripts/',
+                'watch': '**/*.json',
+                'files': [
+                    appBasePath + 'scripts/**/*.json'
+                ]
+            },            
             'html': {
                 'cwd': appBasePath,
                 'files': [
@@ -60,8 +67,9 @@ module.exports = function() {
             'distBaseAssetsPath': distBaseAssetsPath,
             'fonts': distBaseAssetsPath + 'fonts/',
             'images': distBaseAssetsPath + 'images/',
-            'scripts': 'bundle.min.js',
             'styles': distBaseAssetsPath + 'main.min.css',
+            'scripts': 'bundle.min.js',
+            'json': distBaseAssetsPath + 'all.min.json',            
             'html': distBasePath
         },
         'nodeModules': nodeModulesBasePath
