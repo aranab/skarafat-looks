@@ -34,10 +34,15 @@ module.exports = function() {
                     '**/*.{jpg,gif,png}'
                 ]
             },
-            'styles': {
+            'scss': {
                 'cwd': appBasePath + 'scss/',
-                'watch': '**/*.{css,sass,scss}',
+                'watch': '**/*.{sass,scss}',
                 'files': appBasePath + 'scss/styles.scss'
+            },
+            'styles': {
+                'cwd': appBasePath + 'css/',
+                'watch': '**/*.css',
+                'files': appBasePath + 'css/main.css'
             },
             'scripts': {
                 'cwd': appBasePath + 'scripts/',
@@ -67,6 +72,7 @@ module.exports = function() {
             'distBaseAssetsPath': distBaseAssetsPath,
             'fonts': distBaseAssetsPath + 'fonts/',
             'images': distBaseAssetsPath + 'images/',
+            'scss': appBasePath + 'css/main.css',
             'styles': distBaseAssetsPath + 'main.min.css',
             'scripts': 'bundle.min.js',
             'json': distBaseAssetsPath + 'all.min.json',            

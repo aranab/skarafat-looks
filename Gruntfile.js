@@ -50,9 +50,38 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     implementation: sass,
-                    outputStyle: 'compressed',
-                    sourceMap: true
+                    sourceMap: false
                 },
+                src: buildConfig.src.scss.files,
+                dest: buildConfig.dist.scss
+            }
+        },
+
+        /**
+         * Grunt PostCSS
+         * Apply several post-processors to your CSS using PostCSS.
+         * https://www.npmjs.com/package/grunt-postcss
+         */
+        postcss: {
+            options: {
+                map: {
+                    inline: false,
+                    annotation: 'dist/assets/'
+                },
+                processors: [
+                    require('autoprefixer')({ 
+                        browsers: 'last 2 versions' 
+                    }),
+                    require('cssnano')({
+                        preset: ['default', {
+                            discardComments: {
+                                removeAll: true,
+                            }
+                        }]
+                    })
+                ]
+            },
+            dist: {
                 src: buildConfig.src.styles.files,
                 dest: buildConfig.dist.styles
             }
@@ -153,10 +182,13 @@ module.exports = function (grunt) {
                 ]
             },
             styles: {
-                files: buildConfig.src.styles.watch,
-                tasks: ['styles'],
+                files: buildConfig.src.scss.watch,
+                tasks: [
+                    'scss',
+                    'styles'
+                ],
                 options: {
-                    cwd: buildConfig.src.styles.cwd,
+                    cwd: buildConfig.src.scss.cwd,
                 }
             },
             scripts: {
@@ -197,12 +229,14 @@ module.exports = function (grunt) {
     grunt.registerTask('images', 'copy:distImages');
     grunt.registerTask('scripts', 'webpack:dist');
     grunt.registerTask('json', 'minjson:dist');
-    grunt.registerTask('styles', 'sass:dist');   
+    grunt.registerTask('scss', 'sass:dist');
+    grunt.registerTask('styles', 'postcss:dist');   
     grunt.registerTask('html', 'htmlmin:dist');
 
     // Build tasks
     grunt.registerTask('build', [
         'clean',
+        'scss',
         'styles',
         'scripts',
         'json',
