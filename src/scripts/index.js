@@ -1,3 +1,8 @@
+require('core-js/fn/set');
+require('core-js/fn/array/from');
+require('core-js/fn/array/find');
+require('core-js/fn/array/includes');
+require('core-js/fn/object/assign');
 var lib = require('./lib');
 var textAnimation = require('./textAnimation');
 var skillAnimation = require('./skillAnimation');
