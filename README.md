@@ -10,6 +10,8 @@ A project for developing theme of [www.skarafat.com](http://skarafat.com/)
  - [nodejs](https://nodejs.org/en/)
  - [npm](https://www.npmjs.com/)
  - HTML5
+ 
+ Live site view at https://aranab.github.io/skarafat-looks/
 
 ### Run Command
  - Initialize node package install: Run `> npm install`
