@@ -52,7 +52,7 @@
     "particles.js": "^2.0.0",
     "shufflejs": "^5.2.0",
     "susy": "^3.0.5",
-    "uglifyjs-webpack-plugin": "^2.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1"
   },
