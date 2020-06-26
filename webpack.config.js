@@ -1,10 +1,10 @@
 var webpack = require('webpack');
-var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+var TerserPlugin = require('terser-webpack-plugin');
 var buildConfig = require('./BuildConfig')();
 
 module.exports = {
-    entry: buildConfig.src.scripts.file,    
-    output: {        
+    entry: buildConfig.src.scripts.file,
+    output: {
         path: buildConfig.dist.distBaseAssetsPath,
         filename: buildConfig.dist.scripts,
         publicPath: '/assets/'
@@ -32,7 +32,7 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 cache: true,
                 parallel: true,
                 sourceMap: true,
